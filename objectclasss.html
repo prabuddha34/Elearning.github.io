@@ -1,0 +1,170 @@
+<h2>This is a legendary resourceful content use it bros
+     
+</h2>
+    statement;</pre></div><p>(b) What is a compound statement? Give an example.<br><strong>Two or more statements can be grouped together by enclosing them between opening and closing curly braces. Such a group of statements is called a compound statement.</strong></p><pre><code>if (a &lt; b) {
+            
+    /*
+    * All statements within this set of braces 
+    * form the compound statement
+    */
+
+    System.out.println("a is less than b");
+    a = 10;
+    b = 20;
+    System.out.println("The value of a is " + a);
+    System.out.println("The value of b is " + b);
+            
+}
+</code></pre><p>(c) Define:<br>(i) Ternary Operator<br><strong>Ternary Operator is a conditional operator that selects a value depending on its condition. It has the below syntax:</strong></p><div class="highlight highlight-source-java"><pre>expression1 <span class=pl-k>?</span> expression2 <span class=pl-k>:</span> expression3</pre></div><p><strong>If expression1 evaluates to true then the value of the whole expression is the value of expression2, otherwise the value of whole expression is the value of expression3. For example:</strong></p><div class="highlight highlight-source-java"><pre><span class=pl-k>int</span> marks <span class=pl-k>=</span> <span class=pl-c1>50</span>;
+<span class=pl-k>char</span> result <span class=pl-k>=</span> marks <span class=pl-k>>=</span> <span class=pl-c1>35</span> <span class=pl-k>?</span> <span class=pl-s><span class=pl-pds>'</span>P<span class=pl-pds>'</span></span> <span class=pl-k>:</span> <span class=pl-s><span class=pl-pds>'</span>F<span class=pl-pds>'</span></span>;</pre></div><p><strong>The variable result will get a value of 'P' as marks are greater than 35 so condition of ternary operator is true.</strong></p><p>(ii) Implicit Conversion<br><strong>An implicit type conversion is a conversion performed by the compiler without programmer's intervention. It is generally applied by the compiler whenever differing data types are intermixed in an expression so as not to lose information.</strong></p><h4><a id=user-content-question-3 class=anchor href=#question-3 aria-hidden=true><span aria-hidden=true class="octicon octicon-link"></span></a>Question 3</h4><p>Give two differences between:<br>(a) Compiler and Interpreter</p><table><thead><tr><th>Compiler</th><th>Interpreter</th></tr></thead><tbody><tr><td>It converts the whole source program into object program at once.</td><td>It converts the source program into object program one line at a time.</td></tr><tr><td>It displays the errors for the whole program together after compilation.</td><td>It displays the errors of one line at a time and after debugging the control goes to the next line.</td></tr></tbody></table><p>(b) Syntax Error and Logical Error</p><table><thead><tr><th>Syntax Errors</th><th>Logical Errors</th></tr></thead><tbody><tr><td>Syntax Errors occur when we violate the rules of writing the statements of the programming language.</td><td>Logical Errors occur due to our mistakes in programming logic.</td></tr><tr><td>Program fails to compile and execute.</td><td>Program compiles and executes but doesn't give the desired output.</td></tr><tr><td>Syntax Errors are caught by the compiler.</td><td>Logic errors need to be found and corrected by the people working on the program.</td></tr></tbody></table><h4><a id=user-content-question-4 class=anchor href=#question-4 aria-hidden=true><span aria-hidden=true class="octicon octicon-link"></span></a>Question 4</h4><p>Write down the following expressions in Java:</p><p>(a) (√3 * a<sup>2</sup>) / 4<br><strong>(Math.sqrt(3) * a * a) / 4</strong></p><p>(b) a<sup>2</sup> + b<sup>3</sup> + c<sup>4</sup><br><strong>Math.pow(a, 2) + Math.pow(b, 3) + Math.pow(c, 4)</strong></p><p>(c) (a + b)<sup>2</sup> / ab<br><strong>Math.pow((a + b), 2) / (a * b)</strong></p><p>(d) ∛(mn) + mn<sup>3</sup><br><strong>Math.cbrt(m * n) + (m * Math.pow(n, 3))</strong></p><h4><a id=user-content-question-5 class=anchor href=#question-5 aria-hidden=true><span aria-hidden=true class="octicon octicon-link"></span></a>Question 5</h4><p>(a) Rewrite the snippet using Ternary operators:</p><div class="highlight highlight-source-java"><pre><span class=pl-k>if</span>(a<span class=pl-k>&lt;</span>b)
+{
+    c<span class=pl-k>=</span>(a<span class=pl-k>+</span>b);
+}
+<span class=pl-k>else</span> {
+    c<span class=pl-k>=</span>(a<span class=pl-k>-</span>b);
+}</pre></div><h5><a id=user-content-answer class=anchor href=#answer aria-hidden=true><span aria-hidden=true class="octicon octicon-link"></span></a>Answer</h5><div class="highlight highlight-source-java"><pre>c <span class=pl-k>=</span> a <span class=pl-k>&lt;</span> b <span class=pl-k>?</span> (a <span class=pl-k>+</span> b) <span class=pl-k>:</span> (a <span class=pl-k>-</span> b);</pre></div><p>(b) Predict the output:</p><div class="highlight highlight-source-java"><pre><span class=pl-k>int</span> a<span class=pl-k>=</span><span class=pl-c1>6</span>,b<span class=pl-k>=</span><span class=pl-c1>5</span>;
+a <span class=pl-k>+=</span> a<span class=pl-k>++</span> <span class=pl-k>%</span> b<span class=pl-k>++</span> <span class=pl-k>*</span>a <span class=pl-k>+</span> b<span class=pl-k>++</span><span class=pl-k>*</span> <span class=pl-k>--</span>b;</pre></div><h5><a id=user-content-output class=anchor href=#output aria-hidden=true><span aria-hidden=true class="octicon octicon-link"></span></a>Output</h5><pre>
+a = 49
+</pre><h5><a id=user-content-explanation class=anchor href=#explanation aria-hidden=true><span aria-hidden=true class="octicon octicon-link"></span></a>Explanation</h5><pre>
+   a += a++ % b++ *a + b++* --b  
+=> a = a + (a++ % b++ *a + b++* --b)
+=> a = 6 + (6 % 5 * 7 + 6 * 6)  
+// % and * will be applied first due to higher precedence
+=> a = 6 + (7 + 36)
+=> a = 49
+</pre><p>(c) Give the output of the snippet:</p><div class="highlight highlight-source-java"><pre><span class=pl-k>int</span> a<span class=pl-k>=</span><span class=pl-c1>10</span>,b<span class=pl-k>=</span><span class=pl-c1>12</span>;
+<span class=pl-k>if</span>(a<span class=pl-k>==</span><span class=pl-c1>10</span><span class=pl-k>&&</span>b<span class=pl-k>&lt;=</span><span class=pl-c1>12</span>)
+a<span class=pl-k>--</span>;
+<span class=pl-k>else</span>
+<span class=pl-k>++</span>b;
+<span class=pl-smi>System</span><span class=pl-k>.</span>out<span class=pl-k>.</span>println(a <span class=pl-k>+</span> <span class=pl-s><span class=pl-pds>"</span>and<span class=pl-pds>"</span></span> <span class=pl-k>+</span>b);</pre></div><h5><a id=user-content-output-1 class=anchor href=#output-1 aria-hidden=true><span aria-hidden=true class="octicon octicon-link"></span></a>Output</h5><pre>
+9and12
+</pre><h5><a id=user-content-explanation-1 class=anchor href=#explanation-1 aria-hidden=true><span aria-hidden=true class="octicon octicon-link"></span></a>Explanation</h5><p>As a is 10 and b is 12 so the condition of if is true. a is decremented by 1, b remains unchanged.</p><p>(d) Give the output of the snippet:</p><div class="highlight highlight-source-java"><pre><span class=pl-k>int</span> p <span class=pl-k>=</span> <span class=pl-c1>9</span>;
+<span class=pl-k>while</span> (p<span class=pl-k>&lt;=</span><span class=pl-c1>15</span>)
+{
+p<span class=pl-k>++</span>;
+<span class=pl-k>if</span>(p<span class=pl-k>==</span> <span class=pl-c1>10</span>)
+<span class=pl-k>continue</span>;
+<span class=pl-smi>System</span><span class=pl-k>.</span>out<span class=pl-k>.</span>println(p);
+}</pre></div><h5><a id=user-content-output-2 class=anchor href=#output-2 aria-hidden=true><span aria-hidden=true class="octicon octicon-link"></span></a>Output</h5><pre>
+11
+12
+13
+14
+15
+16
+</pre></section><section id=section-b><h2><a id=user-content-section-b class=anchor href=#section-b aria-hidden=true><span aria-hidden=true class="octicon octicon-link"></span></a>Section B</h2><h4><a id=user-content-question-6 class=anchor href=#question-6 aria-hidden=true><span aria-hidden=true class="octicon octicon-link"></span></a>Question 6</h4><p>An Electricity Board charges for electricity per month from their consumers according to the units consumed. The tariff is given below:</p><table><thead><tr><th>Units Consumed</th><th>Charges</th></tr></thead><tbody><tr><td>Up to 200 units</td><td>₹3.80/unit</td></tr><tr><td>More than 200 units and up to 300 units</td><td>₹4.40/unit</td></tr><tr><td>More than 300 units and up to 400 units</td><td>₹5.10/unit</td></tr><tr><td>More than 400 units</td><td>₹5.80/unit</td></tr></tbody></table><p>Write a program to calculate the electricity bill taking consumer's name and units consumed as inputs. Display the output.</p><div class="highlight highlight-source-java"><pre><span class=pl-k>import</span> <span class=pl-smi>java.util.Scanner</span>;
+
+<span class=pl-k>public</span> <span class=pl-k>class</span> <span class=pl-en>KboatElectricBill</span>
+{
+    <span class=pl-k>public</span> <span class=pl-k>static</span> <span class=pl-k>void</span> <span class=pl-en>main</span>(<span class=pl-smi>String</span> <span class=pl-v>args</span>[]) {
+        <span class=pl-smi>Scanner</span> in <span class=pl-k>=</span> <span class=pl-k>new</span> <span class=pl-smi>Scanner</span>(<span class=pl-smi>System</span><span class=pl-k>.</span>in);
+        <span class=pl-smi>System</span><span class=pl-k>.</span>out<span class=pl-k>.</span>print(<span class=pl-s><span class=pl-pds>"</span>Enter Consumer Name: <span class=pl-pds>"</span></span>);
+        <span class=pl-smi>String</span> name <span class=pl-k>=</span> in<span class=pl-k>.</span>nextLine();
+        <span class=pl-smi>System</span><span class=pl-k>.</span>out<span class=pl-k>.</span>print(<span class=pl-s><span class=pl-pds>"</span>Enter Unit's Consumed: <span class=pl-pds>"</span></span>);
+        <span class=pl-k>int</span> units <span class=pl-k>=</span> in<span class=pl-k>.</span>nextInt();
+        <span class=pl-k>double</span> amt <span class=pl-k>=</span> <span class=pl-c1>0.0</span>;
+        <span class=pl-k>if</span> (units <span class=pl-k>&lt;=</span> <span class=pl-c1>200</span>)
+            amt <span class=pl-k>=</span> units <span class=pl-k>*</span> <span class=pl-c1>3.8</span>;
+        <span class=pl-k>else</span> <span class=pl-k>if</span> (units <span class=pl-k>&lt;=</span> <span class=pl-c1>300</span>)
+            amt <span class=pl-k>=</span> (<span class=pl-c1>200</span> <span class=pl-k>*</span> <span class=pl-c1>3.8</span>) <span class=pl-k>+</span> ((units <span class=pl-k>-</span> <span class=pl-c1>200</span>) <span class=pl-k>*</span> <span class=pl-c1>4.4</span>);
+        <span class=pl-k>else</span> <span class=pl-k>if</span> (units <span class=pl-k>&lt;=</span> <span class=pl-c1>400</span>)
+            amt <span class=pl-k>=</span> (<span class=pl-c1>200</span> <span class=pl-k>*</span> <span class=pl-c1>3.8</span>) <span class=pl-k>+</span> (<span class=pl-c1>100</span> <span class=pl-k>*</span> <span class=pl-c1>4.4</span>) <span class=pl-k>+</span> ((units <span class=pl-k>-</span> <span class=pl-c1>300</span>) <span class=pl-k>*</span> <span class=pl-c1>5.1</span>);
+        <span class=pl-k>else</span>
+            amt <span class=pl-k>=</span> (<span class=pl-c1>200</span> <span class=pl-k>*</span> <span class=pl-c1>3.8</span>) <span class=pl-k>+</span> (<span class=pl-c1>100</span> <span class=pl-k>*</span> <span class=pl-c1>4.4</span>) <span class=pl-k>+</span> (<span class=pl-c1>100</span> <span class=pl-k>*</span> <span class=pl-c1>5.1</span>) <span class=pl-k>+</span> ((units <span class=pl-k>-</span> <span class=pl-c1>400</span>) <span class=pl-k>*</span> <span class=pl-c1>5.8</span>);
+            
+        <span class=pl-smi>System</span><span class=pl-k>.</span>out<span class=pl-k>.</span>println(<span class=pl-s><span class=pl-pds>"</span>Consumer Name: <span class=pl-pds>"</span></span> <span class=pl-k>+</span> name);
+        <span class=pl-smi>System</span><span class=pl-k>.</span>out<span class=pl-k>.</span>println(<span class=pl-s><span class=pl-pds>"</span>Units Consumed: <span class=pl-pds>"</span></span> <span class=pl-k>+</span> units);
+        <span class=pl-smi>System</span><span class=pl-k>.</span>out<span class=pl-k>.</span>println(<span class=pl-s><span class=pl-pds>"</span>Bill Amount: <span class=pl-pds>"</span></span> <span class=pl-k>+</span> amt);
+    }
+}</pre></div><h5><a id=user-content-output-3 class=anchor href=#output-3 aria-hidden=true><span aria-hidden=true class="octicon octicon-link"></span></a>Output</h5><div class=inline-image><picture><source type=image/webp srcset="https://res.cloudinary.com/kboat/image/upload/q_auto/v1/solns-icse-9-apc/mp_1-p1.webp 600w" sizes="(max-width: 600px) 90vw, 600px"><source type=image/jpeg srcset="https://res.cloudinary.com/kboat/image/upload/fl_progressive,q_auto/v1/solns-icse-9-apc/mp_1-p1.jpg 600w" sizes="(max-width: 600px) 90vw, 600px"><img src=https://res.cloudinary.com/kboat/image/upload/fl_progressive,q_auto/v1/solns-icse-9-apc/mp_1-p1.jpg alt="BlueJ output of KboatElectricBill.java"></picture></div><h4><a id=user-content-question-7 class=anchor href=#question-7 aria-hidden=true><span aria-hidden=true class="octicon octicon-link"></span></a>Question 7</h4><p>The equivalent resistance of series and parallel connections of two resistances are given by the formula:</p><p>(a) R<sub>1</sub> = r<sub>1</sub> + r<sub>2</sub> (Series)<br>(b) R<sub>2</sub> = (r<sub>1</sub> * r<sub>2</sub>) / (r<sub>1</sub> + r<sub>2</sub>) (Parallel)</p><p>Write a program to input the value of r<sub>1</sub> and r<sub>2</sub>. Calculate and display the output of the equivalent resistance as per User's choice.</p><div class="highlight highlight-source-java"><pre><span class=pl-k>import</span> <span class=pl-smi>java.util.Scanner</span>;
+
+<span class=pl-k>public</span> <span class=pl-k>class</span> <span class=pl-en>KboatResistance</span>
+{
+    <span class=pl-k>public</span> <span class=pl-k>static</span> <span class=pl-k>void</span> <span class=pl-en>main</span>(<span class=pl-smi>String</span> <span class=pl-v>args</span>[]) {
+        <span class=pl-smi>Scanner</span> in <span class=pl-k>=</span> <span class=pl-k>new</span> <span class=pl-smi>Scanner</span>(<span class=pl-smi>System</span><span class=pl-k>.</span>in);
+        <span class=pl-smi>System</span><span class=pl-k>.</span>out<span class=pl-k>.</span>println(<span class=pl-s><span class=pl-pds>"</span>1. Series<span class=pl-pds>"</span></span>);
+        <span class=pl-smi>System</span><span class=pl-k>.</span>out<span class=pl-k>.</span>println(<span class=pl-s><span class=pl-pds>"</span>2. Parallel<span class=pl-pds>"</span></span>);
+        
+        <span class=pl-smi>System</span><span class=pl-k>.</span>out<span class=pl-k>.</span>print(<span class=pl-s><span class=pl-pds>"</span>Enter your choice: <span class=pl-pds>"</span></span>);
+        <span class=pl-k>int</span> choice <span class=pl-k>=</span> in<span class=pl-k>.</span>nextInt();
+        <span class=pl-k>boolean</span> isChoiceValid <span class=pl-k>=</span> <span class=pl-c1>true</span>;
+        
+        <span class=pl-smi>System</span><span class=pl-k>.</span>out<span class=pl-k>.</span>print(<span class=pl-s><span class=pl-pds>"</span>Enter r1: <span class=pl-pds>"</span></span>);
+        <span class=pl-k>double</span> r1 <span class=pl-k>=</span> in<span class=pl-k>.</span>nextDouble();
+        <span class=pl-smi>System</span><span class=pl-k>.</span>out<span class=pl-k>.</span>print(<span class=pl-s><span class=pl-pds>"</span>Enter r2: <span class=pl-pds>"</span></span>);
+        <span class=pl-k>double</span> r2 <span class=pl-k>=</span> in<span class=pl-k>.</span>nextDouble();
+        <span class=pl-k>double</span> eqr <span class=pl-k>=</span> <span class=pl-c1>0.0</span>; 
+        
+        <span class=pl-k>switch</span> (choice) {
+            <span class=pl-k>case</span> <span class=pl-c1>1</span><span class=pl-k>:</span>
+                eqr <span class=pl-k>=</span> r1 <span class=pl-k>+</span> r2;
+                <span class=pl-k>break</span>;
+            <span class=pl-k>case</span> <span class=pl-c1>2</span><span class=pl-k>:</span>
+                eqr <span class=pl-k>=</span> (r1 <span class=pl-k>*</span> r2) <span class=pl-k>/</span> (r1 <span class=pl-k>+</span> r2);
+                <span class=pl-k>break</span>;
+            <span class=pl-k>default</span><span class=pl-k>:</span>
+                isChoiceValid <span class=pl-k>=</span> <span class=pl-c1>false</span>;
+                <span class=pl-smi>System</span><span class=pl-k>.</span>out<span class=pl-k>.</span>println(<span class=pl-s><span class=pl-pds>"</span>Incorrect choice<span class=pl-pds>"</span></span>);
+                <span class=pl-k>break</span>;
+        }
+        
+        <span class=pl-k>if</span> (isChoiceValid)
+            <span class=pl-smi>System</span><span class=pl-k>.</span>out<span class=pl-k>.</span>println(<span class=pl-s><span class=pl-pds>"</span>Equivalent resistance = <span class=pl-pds>"</span></span> <span class=pl-k>+</span> eqr);
+    }
+}</pre></div><h5><a id=user-content-output-4 class=anchor href=#output-4 aria-hidden=true><span aria-hidden=true class="octicon octicon-link"></span></a>Output</h5><div class=inline-image><picture><source type=image/webp srcset="https://res.cloudinary.com/kboat/image/upload/q_auto/v1/solns-icse-9-apc/mp_1-p18_1.webp 600w" sizes="(max-width: 600px) 90vw, 600px"><source type=image/jpeg srcset="https://res.cloudinary.com/kboat/image/upload/fl_progressive,q_auto/v1/solns-icse-9-apc/mp_1-p18_1.jpg 600w" sizes="(max-width: 600px) 90vw, 600px"><img src=https://res.cloudinary.com/kboat/image/upload/fl_progressive,q_auto/v1/solns-icse-9-apc/mp_1-p18_1.jpg alt="BlueJ output of KboatResistance.java"></picture></div><div class=inline-image><picture><source type=image/webp srcset="https://res.cloudinary.com/kboat/image/upload/q_auto/v1/solns-icse-9-apc/mp_1-p18_2.webp 600w" sizes="(max-width: 600px) 90vw, 600px"><source type=image/jpeg srcset="https://res.cloudinary.com/kboat/image/upload/fl_progressive,q_auto/v1/solns-icse-9-apc/mp_1-p18_2.jpg 600w" sizes="(max-width: 600px) 90vw, 600px"><img src=https://res.cloudinary.com/kboat/image/upload/fl_progressive,q_auto/v1/solns-icse-9-apc/mp_1-p18_2.jpg alt="BlueJ output of KboatResistance.java"></picture></div><h4><a id=user-content-question-8 class=anchor href=#question-8 aria-hidden=true><span aria-hidden=true class="octicon octicon-link"></span></a>Question 8</h4><p>(a) Write a program to display the first ten terms of the series:<br>5, 10, 17, --------------</p><div class="highlight highlight-source-java"><pre><span class=pl-k>public</span> <span class=pl-k>class</span> <span class=pl-en>KboatSeries</span>
+{
+    <span class=pl-k>public</span> <span class=pl-k>static</span> <span class=pl-k>void</span> <span class=pl-en>main</span>(<span class=pl-smi>String</span> <span class=pl-v>args</span>[]) {
+        <span class=pl-k>for</span> (<span class=pl-k>int</span> i <span class=pl-k>=</span> <span class=pl-c1>2</span>; i <span class=pl-k>&lt;=</span> <span class=pl-c1>11</span>; i<span class=pl-k>++</span>) {
+            <span class=pl-smi>System</span><span class=pl-k>.</span>out<span class=pl-k>.</span>print((i <span class=pl-k>*</span> i <span class=pl-k>+</span> <span class=pl-c1>1</span>) <span class=pl-k>+</span> <span class=pl-s><span class=pl-pds>"</span> <span class=pl-pds>"</span></span>);
+        }
+    }
+}</pre></div><h5><a id=user-content-output-5 class=anchor href=#output-5 aria-hidden=true><span aria-hidden=true class="octicon octicon-link"></span></a>Output</h5><div class=inline-image><picture><source type=image/webp srcset="https://res.cloudinary.com/kboat/image/upload/q_auto/v1/solns-icse-9-apc/mp_1-p3.webp 600w" sizes="(max-width: 600px) 90vw, 600px"><source type=image/jpeg srcset="https://res.cloudinary.com/kboat/image/upload/fl_progressive,q_auto/v1/solns-icse-9-apc/mp_1-p3.jpg 600w" sizes="(max-width: 600px) 90vw, 600px"><img src=https://res.cloudinary.com/kboat/image/upload/fl_progressive,q_auto/v1/solns-icse-9-apc/mp_1-p3.jpg alt="BlueJ output of KboatSeries.java"></picture></div><p>(b) Write a program to display the given pattern:<br>1 1 1 1 1<br>3 3 3 3<br>5 5 5<br>7 7<br>9</p><div class="highlight highlight-source-java"><pre><span class=pl-k>public</span> <span class=pl-k>class</span> <span class=pl-en>KboatPattern</span>
+{
+    <span class=pl-k>public</span> <span class=pl-k>static</span> <span class=pl-k>void</span> <span class=pl-en>main</span>(<span class=pl-smi>String</span> <span class=pl-v>args</span>[]) {
+        <span class=pl-k>for</span> (<span class=pl-k>int</span> i <span class=pl-k>=</span> <span class=pl-c1>5</span>, term <span class=pl-k>=</span> <span class=pl-c1>1</span>; i <span class=pl-k>>=</span> <span class=pl-c1>0</span>; i<span class=pl-k>--</span>, term <span class=pl-k>+=</span> <span class=pl-c1>2</span>) {
+            <span class=pl-k>for</span> (<span class=pl-k>int</span> j <span class=pl-k>=</span> <span class=pl-c1>1</span>; j <span class=pl-k>&lt;=</span> i; j<span class=pl-k>++</span>) {
+                <span class=pl-smi>System</span><span class=pl-k>.</span>out<span class=pl-k>.</span>print(term <span class=pl-k>+</span> <span class=pl-s><span class=pl-pds>"</span> <span class=pl-pds>"</span></span>);
+            }
+            <span class=pl-smi>System</span><span class=pl-k>.</span>out<span class=pl-k>.</span>println();
+        }
+    }
+}</pre></div><h5><a id=user-content-output-6 class=anchor href=#output-6 aria-hidden=true><span aria-hidden=true class="octicon octicon-link"></span></a>Output</h5><div class=inline-image><picture><source type=image/webp srcset="https://res.cloudinary.com/kboat/image/upload/q_auto/v1/solns-icse-9-apc/mp_1-p4.webp 600w" sizes="(max-width: 600px) 90vw, 600px"><source type=image/jpeg srcset="https://res.cloudinary.com/kboat/image/upload/fl_progressive,q_auto/v1/solns-icse-9-apc/mp_1-p4.jpg 600w" sizes="(max-width: 600px) 90vw, 600px"><img src=https://res.cloudinary.com/kboat/image/upload/fl_progressive,q_auto/v1/solns-icse-9-apc/mp_1-p4.jpg alt="BlueJ output of KboatPattern.java"></picture></div><h4><a id=user-content-question-9 class=anchor href=#question-9 aria-hidden=true><span aria-hidden=true class="octicon octicon-link"></span></a>Question 9</h4><p>(a) Write a program to find the sum of first 20 terms of the series:<br>S = (2/3) + (4/5) + (8/7) + (16/9) + ----------</p><div class="highlight highlight-source-java"><pre><span class=pl-k>public</span> <span class=pl-k>class</span> <span class=pl-en>KboatSeriesSum</span>
+{
+    <span class=pl-k>public</span> <span class=pl-k>static</span> <span class=pl-k>void</span> <span class=pl-en>main</span>(<span class=pl-smi>String</span> <span class=pl-v>args</span>[]) {
+        <span class=pl-k>double</span> sum <span class=pl-k>=</span> <span class=pl-c1>0.0</span>;
+        <span class=pl-k>for</span> (<span class=pl-k>int</span> i <span class=pl-k>=</span> <span class=pl-c1>1</span>, j <span class=pl-k>=</span> <span class=pl-c1>3</span>; i <span class=pl-k>&lt;=</span> <span class=pl-c1>20</span>; i<span class=pl-k>++</span>, j <span class=pl-k>+=</span> <span class=pl-c1>2</span>) {
+            sum <span class=pl-k>+=</span> <span class=pl-smi>Math</span><span class=pl-k>.</span>pow(<span class=pl-c1>2</span>, i) <span class=pl-k>/</span> j;
+        }
+        <span class=pl-smi>System</span><span class=pl-k>.</span>out<span class=pl-k>.</span>println(<span class=pl-s><span class=pl-pds>"</span>Sum = <span class=pl-pds>"</span></span> <span class=pl-k>+</span> sum);
+    }
+}</pre></div><h5><a id=user-content-output-7 class=anchor href=#output-7 aria-hidden=true><span aria-hidden=true class="octicon octicon-link"></span></a>Output</h5><div class=inline-image><picture><source type=image/webp srcset="https://res.cloudinary.com/kboat/image/upload/q_auto/v1/solns-icse-9-apc/mp_1-p5.webp 600w" sizes="(max-width: 600px) 90vw, 600px"><source type=image/jpeg srcset="https://res.cloudinary.com/kboat/image/upload/fl_progressive,q_auto/v1/solns-icse-9-apc/mp_1-p5.jpg 600w" sizes="(max-width: 600px) 90vw, 600px"><img src=https://res.cloudinary.com/kboat/image/upload/fl_progressive,q_auto/v1/solns-icse-9-apc/mp_1-p5.jpg alt="BlueJ output of KboatSeriesSum.java"></picture></div><p>(b) Write a program to display the given pattern:<br>3<br>5 6<br>8 9 10<br>12 13 14 15</p><div class="highlight highlight-source-java"><pre><span class=pl-k>public</span> <span class=pl-k>class</span> <span class=pl-en>KboatPattern</span>
+{
+    <span class=pl-k>public</span> <span class=pl-k>static</span> <span class=pl-k>void</span> <span class=pl-en>main</span>(<span class=pl-smi>String</span> <span class=pl-v>args</span>[]) {
+        <span class=pl-k>int</span> t <span class=pl-k>=</span> <span class=pl-c1>2</span>;
+        <span class=pl-k>for</span> (<span class=pl-k>int</span> i <span class=pl-k>=</span> <span class=pl-c1>1</span>, j <span class=pl-k>=</span> <span class=pl-c1>1</span>; i <span class=pl-k>&lt;=</span> <span class=pl-c1>4</span>; i<span class=pl-k>++</span>, j<span class=pl-k>++</span>) {
+            t <span class=pl-k>+=</span> i;
+            <span class=pl-k>for</span> (<span class=pl-k>int</span> k <span class=pl-k>=</span> t, l <span class=pl-k>=</span> <span class=pl-c1>1</span>; l <span class=pl-k>&lt;=</span> j; k<span class=pl-k>++</span>, l<span class=pl-k>++</span>)
+                <span class=pl-smi>System</span><span class=pl-k>.</span>out<span class=pl-k>.</span>print(k <span class=pl-k>+</span> <span class=pl-s><span class=pl-pds>"</span> <span class=pl-pds>"</span></span>);
+            <span class=pl-smi>System</span><span class=pl-k>.</span>out<span class=pl-k>.</span>println();  
+        }
+    }
+}</pre></div><h5><a id=user-content-output-8 class=anchor href=#output-8 aria-hidden=true><span aria-hidden=true class="octicon octicon-link"></span></a>Output</h5><div class=inline-image><picture><source type=image/webp srcset="https://res.cloudinary.com/kboat/image/upload/q_auto/v1/solns-icse-9-apc/mp_1-p6.webp 600w" sizes="(max-width: 600px) 90vw, 600px"><source type=image/jpeg srcset="https://res.cloudinary.com/kboat/image/upload/fl_progressive,q_auto/v1/solns-icse-9-apc/mp_1-p6.jpg 600w" sizes="(max-width: 600px) 90vw, 600px"><img src=https://res.cloudinary.com/kboat/image/upload/fl_progressive,q_auto/v1/solns-icse-9-apc/mp_1-p6.jpg alt="BlueJ output of KboatPattern.java"></picture></div><h4><a id=user-content-question-10 class=anchor href=#question-10 aria-hidden=true><span aria-hidden=true class="octicon octicon-link"></span></a>Question 10</h4><p>Write a program to input a number. Find the sum of digits and the number of digits. Display the output.<br>Sample Input: 7359<br>Sum of digits = 24<br>Number of digits = 4</p><div class="highlight highlight-source-java"><pre><span class=pl-k>import</span> <span class=pl-smi>java.util.Scanner</span>;
+
+<span class=pl-k>public</span> <span class=pl-k>class</span> <span class=pl-en>KboatDigitSum</span>
+{
+    <span class=pl-k>public</span> <span class=pl-k>static</span> <span class=pl-k>void</span> <span class=pl-en>main</span>(<span class=pl-smi>String</span> <span class=pl-v>args</span>[]) {
+        <span class=pl-smi>Scanner</span> in <span class=pl-k>=</span> <span class=pl-k>new</span> <span class=pl-smi>Scanner</span>(<span class=pl-smi>System</span><span class=pl-k>.</span>in);
+        <span class=pl-smi>System</span><span class=pl-k>.</span>out<span class=pl-k>.</span>print(<span class=pl-s><span class=pl-pds>"</span>Enter a number: <span class=pl-pds>"</span></span>);
+        <span class=pl-k>int</span> n <span class=pl-k>=</span> in<span class=pl-k>.</span>nextInt();
+        <span class=pl-k>int</span> sum <span class=pl-k>=</span> <span class=pl-c1>0</span>, count <span class=pl-k>=</span> <span class=pl-c1>0</span>;
+        <span class=pl-k>while</span> (n <span class=pl-k>!=</span> <span class=pl-c1>0</span>) {
+            <span class=pl-k>int</span> d <span class=pl-k>=</span> n <span class=pl-k>%</span> <span class=pl-c1>10</span>;
+            sum <span class=pl-k>+=</span> d;
+            count<span class=pl-k>++</span>;
+            n <span class=pl-k>/=</span> <span class=pl-c1>10</span>;
+        }
+        <span class=pl-smi>System</span><span class=pl-k>.</span>out<span class=pl-k>.</span>println(<span class=pl-s><span class=pl-pds>"</span>Sum of digits = <span class=pl-pds>"</span></span> <span class=pl-k>+</span> sum);
+        <span class=pl-smi>System</span><span class=pl-k>.</span>out<span class=pl-k>.</span>println(<span class=pl-s><span class=pl-pds>"</span>Number of digits = <span class=pl-pds>"</span></span> <span class=pl-k>+</span> count);
+    }
+}</pre></div><h5><a id=user-content-output-9 class=anchor href=#output-9 aria-hidden=true><span aria-hidden=true class="octicon octicon-link"></span></a>Output</h5><div class=inline-image><picture><source type=image/webp srcset="https://res.cloudinary.com/kboat/image/upload/q_auto/v1/solns-icse-9-apc/mp_1-p7.webp 600w" sizes="(max-width: 600px) 90vw, 600px"><source type=image/jpeg srcset="https://res.cloudinary.com/kboat/image/upload/fl_progressive,q_auto/v1/solns-icse-9-apc/mp_1-p7.jpg 600w" sizes="(max-width: 600px) 90vw, 600px"><img src=https://res.cloudinar
